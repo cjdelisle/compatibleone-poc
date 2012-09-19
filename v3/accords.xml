@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <accords>
 <publisher
     publisher=''
@@ -44,7 +45,7 @@
          tls=''/>
     <domain name='occi' zone='europe'/>
 </comons>
-<coes
+<cops
     publisher='http://127.0.0.1:8086'
     operator='accords'
     identity='127.0.0.1:8089'
@@ -53,12 +54,12 @@
     threads='1'>
     <rest host='127.0.0.1' port='8089'/>
     <security
-         user='service-coes'
+         user='service-cops'
          password='co-system'
          monitor='1'
          tls=''/>
     <domain name='occi' zone='europe'/>
-</coes>
+</cops>
 <conets
     publisher='http://127.0.0.1:8086'
     operator='accords'
@@ -329,7 +330,7 @@
          tls=''/>
     <domain name='occi' zone='europe'/>
 </slam>
-<example
+<copaas
     publisher='http://127.0.0.1:8086'
     operator='accords'
     identity='127.0.0.1:8108'
@@ -337,6 +338,36 @@
     debug='0'
     threads='1'>
     <rest host='127.0.0.1' port='8108'/>
+    <security
+         user='service-copaas'
+         password='co-system'
+         monitor='1'
+         tls=''/>
+    <domain name='occi' zone='europe'/>
+</copaas>
+<jpaasprocci
+    publisher='http://127.0.0.1:8086'
+    operator='accords'
+    identity='127.0.0.1:8109'
+    verbose='0'
+    debug='0'
+    threads='1'>
+    <rest host='127.0.0.1' port='8109'/>
+    <security
+         user='service-jpaasprocci'
+         password='co-system'
+         monitor='1'
+         tls=''/>
+    <domain name='occi' zone='europe'/>
+</jpaasprocci>
+<example
+    publisher='http://127.0.0.1:8086'
+    operator='accords'
+    identity='127.0.0.1:8110'
+    verbose='0'
+    debug='0'
+    threads='1'>
+    <rest host='127.0.0.1' port='8110'/>
     <security
          user='service-example'
          password='co-system'
