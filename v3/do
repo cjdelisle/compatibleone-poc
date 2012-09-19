@@ -1,9 +1,14 @@
 #!/bin/bash
 
 #git clean -dxf && git pull
-
+if [[ "$1" == "" || "$2" == "" || "$3" == "" || "$4" == "" ]]; then
+    echo "usage: $0 <username> <password> <tenant> <ip addr>"
+    exit 1
+fi
 sed -i "s/USER_NAME/$1/g" ./os_config.xml
 sed -i "s/PASSWORD/$2/g" ./os_config.xml
+sed -i "s/TENANT/$3/g" ./os_config.xml
+sed -i "s/127\.0\.0\.1/$4/g" ./accords.xml
 
 accords-config
 co-start
