@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF8"?>
+
+<!-- This is the manifest for building an image containing the MySQL service -->
+
+<manifest name="mysql" xmlns="http://www.compatibleone.fr/schemes/manifest.xsd">
+	<node name="mysql" type="simple" access="public" scope="normal" provider="openstack" >
+		<infrastructure name="mysql">
+			<compute name="mysql" architecture="x86" cores="1" memory="1G" speed="1G"/>
+			<storage name="mysql" size="10G"/>
+			<!-- Define which port should be open so that external clients can connect to the services on this machine.
+                             We open the SSH port, the COSACS port used to build and configure the machine and, of course, the MySQL server port -->			
+			<network name="mysql" label="ethernet" vlan="100M">
+				<port name="ssh" protocol="tcp" from="22" to="22"/>
+				<port name="cosacs" protocol="tcp" from="8286" to="8286"/>
+                                <port name="mysql" protocol="tcp" from="3306" to="3306"/>
+			</network>
+		</infrastructure>
+		<image name="mysql">
+                        <!-- We start with the empty image debian_with_cosacs that contains a standard Debian distribution plus the COSACS service that is used to configure the machine -->
+			<system name="debian_with_cosacs"/>
+                        <!-- We define the instructions for installing the needed packages for setting up a MySQL server. These instruction are written in a script that is first downloaded
+                             and then executed. We could have written this script here as a sequence of instruction, but it has been published in a public repository so that it can be reused
+			     also in other contexts. -->
+			<package
+				name="mysql1"
+				installation="wget http://gitorious.ow2.org/ow2-compatibleone/cosacs-repository/blobs/raw/master/debian_squeeze/mysql/install.sh; bash install.sh"
+				configuration="#"
+			/>
+		</image>
+	</node>
+	<configuration name="mysql"/>
+	<interface name="mysql"/>
+	<account name="test"/>
+	<security name="mysql"/>
+</manifest>
+
+
+
+
+
+
+
+
+
+
+
