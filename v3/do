@@ -21,3 +21,6 @@ co-parser accounts
 
 co-parser cassandra
 co-parser xwiki
+
+# create an SLA named 'xwiki' with user 'test' and manifest called 'xwiki'
+bash ../../accords-platform/manifests/build-sla xwiki test xwiki
