@@ -2,11 +2,11 @@
 
 <!-- Openstack account used by the COIPS image production service for building images -->
 <os_config
- id="e1f892e3-7826-4326-8866-9354b95d3b17" name="coips" description="Configuration of Account for POC1 XWiki" user="PUT_YOUR_USERNAME_HERE" password="PUT_YOUR_PASSWORD_HERE" authenticate="" agent="CompatibleOne/OpenStackClient/1.0a.0.01" host="http://beta.enocloud.com:5000/v2.0" version="v1.1" namespace="PUT_YOUR_NAMESPACE_HERE" base="" tls="0" current="0" />
+ id="e1f892e3-7826-4326-8866-9354b95d3b17" name="coips" description="Configuration of Account for POC1 XWiki" user="USER_NAME" password="PASSWORD" authenticate="" agent="CompatibleOne/OpenStackClient/1.0a.0.01" host="http://beta.enocloud.com:5000/v2.0" version="v1.1" namespace="xwiki" base="" tls="0" current="0" />
 
 <!-- The Openstack account used for provisioning resources -->
 <os_config
- id="e1f892e3-7826-4326-8866-9354b95d3b18" name="test" description="Configuration of Account for POC1 XWiki" user="PUT_YOUR_USERNAME_HERE" password="PUT_YOUR_PASSWORD_HERE" authenticate="" agent="CompatibleOne/OpenStackClient/1.0a.0.01" host="http://beta.enocloud.com:5000/v2.0" version="v1.1" namespace="PUT_YOUR_NAMESPACE_HERE" base="" tls="0" current="0" />
+ id="e1f892e3-7826-4326-8866-9354b95d3b18" name="test" description="Configuration of Account for POC1 XWiki" user="USER_NAME" password="PASSWORD" authenticate="" agent="CompatibleOne/OpenStackClient/1.0a.0.01" host="http://beta.enocloud.com:5000/v2.0" version="v1.1" namespace="xwiki" base="" tls="0" current="0" />
 </os_configs>
  
 

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF8"?>
+
+<import name="accounts" xmlns="http://www.compatibleone.fr/schemes/cords.xsd">
+
+<account name="jamie">
+	<user name="jamie" role="user"/>
+</account>
+
+<account name="fabio">
+	<user name="fabio" role="user"/>
+</account>
+
+</import>
+
+

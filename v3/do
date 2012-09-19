@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#git clean -dxf && git pull
+
+sed -i "s/USER_NAME/$1/g" ./os_config.xml
+sed -i "s/PASSWORD/$2/g" ./os_config.xml
+
+accords-config
+co-start
+bash ../../accords-platform/scripts/co-check
+co-parser metrics
+co-parser coips
+co-parser accounts
