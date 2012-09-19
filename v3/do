@@ -8,9 +8,11 @@ fi
 sed -i "s/USER_NAME/$1/g" ./os_config.xml
 sed -i "s/PASSWORD/$2/g" ./os_config.xml
 sed -i "s/TENANT/$3/g" ./os_config.xml
-sed -i "s/127\.0\.0\.1/$4/g" ./accords.xml
 
 accords-config
+
+sed -i "s/127\.0\.0\.1/$4/g" ./accords.xml
+
 co-start
 bash ../../accords-platform/scripts/co-check
 co-parser metrics
