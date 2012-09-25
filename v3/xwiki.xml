@@ -19,9 +19,9 @@
 		</image>
 	</node>
 	<configuration name="xwiki">
-  <action expression="cassandra1.cassandra.configure(cassandramaster.cassandra.hostname);"/>
-		<action expression="cassandramaster.fork('bash /root/start-cassandra.sh');"/>
-		<action expression="cassandra1.fork('bash /root/start-cassandra.sh');"/>
+		<action expression="cassandra1.cassandra.configure(cassandramaster.cassandra.hostname);"/>
+		<action expression="cassandramaster.cassandra.fork('bash /root/start-cassandra.sh');"/>
+		<action expression="cassandra1.cassandra.fork('bash /root/start-cassandra.sh');"/>
 		<action expression="xwiki.configure(cassandramaster.cassandra.hostname);"/>
 		<action expression="xwiki.fork('bash /root/xwiki.sh');"/>                  
 	</configuration>
