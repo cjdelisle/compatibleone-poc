@@ -41,4 +41,6 @@
  id='3d960eb3-paas-4bdd-a7a7-20e9coms85f7' name='service-copaas' password='co-system' />
 <cords_user 
  id='3d960eb3-jpaa-4bdd-a7a7-20e9coms85f7' name='service-jpaasprocci' password='co-system' />
+<cords_user
+ id='3d960eb3-slam-4bdd-a7a7-20e9coms85f7' name='service-slam' password='co-system' />
 </cords_users>
