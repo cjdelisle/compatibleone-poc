@@ -15,13 +15,13 @@
                         </network>
 		</infrastructure>
 		<image name="xwiki">
-			<system name="debian_with_cosacs"/>
+			<system name="POC1V3.XWiki"/>
 		</image>
 	</node>
 	<configuration name="xwiki">
   <action expression="cassandra1.cassandra.configure(cassandramaster.cassandra.hostname);"/>
-		<action expression="cassandramaster.fork('bash /root/cassandra.sh');"/>
-		<action expression="cassandra1.fork('bash /root/cassandra.sh');"/>
+		<action expression="cassandramaster.fork('bash /root/start-cassandra.sh');"/>
+		<action expression="cassandra1.fork('bash /root/start-cassandra.sh');"/>
 		<action expression="xwiki.configure(cassandramaster.cassandra.hostname);"/>
 		<action expression="xwiki.fork('bash /root/xwiki.sh');"/>                  
 	</configuration>
