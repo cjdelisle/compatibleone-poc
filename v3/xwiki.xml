@@ -2,7 +2,7 @@
 
 <manifest name="xwiki" xmlns="http://www.compatibleone.fr/schemes/manifest.xsd">
 	<description>The xwiki service</description>
-	<node name="cassandramaster" type="cassandra"/>
+	<node name="cassandra0" type="cassandra"/>
 	<node name="cassandra1" type="cassandra"/>
 	<node name="xwiki" type="simple" access="public" scope="normal" provider="openstack" >
 		<infrastructure name="xwiki">
@@ -19,11 +19,11 @@
 		</image>
 	</node>
 	<configuration name="xwiki">
-		<action expression="cassandra1.cassandra.configure(cassandramaster.cassandra.hostname);"/>
-		<action expression="cassandramaster.cassandra.fork('bash /root/start-cassandra.sh');"/>
+		<action expression="cassandra0.cassandra.configure(xwiki.hostname);"/>
+		<action expression="cassandra1.cassandra.configure(xwiki.hostname);"/>
+		<action expression="cassandra0.cassandra.fork('bash /root/start-cassandra.sh');"/>
 		<action expression="cassandra1.cassandra.fork('bash /root/start-cassandra.sh');"/>
-		<action expression="xwiki.configure(cassandramaster.cassandra.hostname);"/>
-		<action expression="xwiki.fork('bash /root/xwiki.sh');"/>                  
+		<action expression="xwiki.fork('bash /root/xwiki.sh');"/>
 	</configuration>
 	<interface name="xwiki"/>
 	<account name="test"/>

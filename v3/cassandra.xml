@@ -8,8 +8,7 @@
 			<network name="cassandra" label="ethernet" vlan="100M">
 				<port name="ssh" protocol="tcp" from="22" to="22"/>
 				<port name="cosacs" protocol="tcp" from="8286" to="8286"/>
-                                <port name="cassandra1" protocol="tcp" from="9160" to="9160"/>
-				<port name="cassandra2" protocol="tcp" from="7000" to="7000"/>
+				<port name="cassandra" protocol="tcp" from="7000" to="7000"/>
 			</network>
 		</infrastructure>
 		<image name="cassandra">
