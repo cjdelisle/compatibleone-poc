@@ -1,5 +1,7 @@
 # XWiki/Cassandra on CompatableOne proof of concept
 
+[![XWiki labs logo](https://raw.githubusercontent.com/xwiki-labs/xwiki-labs-logo/master/projects/xwikilabs/xlabs-project.png "XWiki labs")](https://labs.xwiki.com/xwiki/bin/view/Main/WebHome)
+
 To build this, start by cloning the CompatableOne ACCORDS platform.
 
     git clone git://gitorious.ow2.org/ow2-compatibleone/accords-platform.git
